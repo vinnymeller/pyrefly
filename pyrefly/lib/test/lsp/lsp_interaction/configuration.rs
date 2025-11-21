@@ -73,9 +73,9 @@ fi
 
     let interpreter_path = custom_interpreter_path.join("bin/python");
     write(&interpreter_path, python_script).unwrap();
-    let mut perms = fs::metadata(&interpreter_path).unwrap().permissions();
-    perms.set_mode(0o755); // rwxr-xr-x
-    fs::set_permissions(&interpreter_path, perms).unwrap();
+    // let mut perms = fs::metadata(&interpreter_path).unwrap().permissions();
+    // perms.set_mode(0o755); // rwxr-xr-x
+    // fs::set_permissions(&interpreter_path, perms).unwrap();
 
     interpreter_path
 }
